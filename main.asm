@@ -19,7 +19,8 @@ section .text
 	xor ebx,ebx
 	mov [ile],ecx
 	mov eax,[ile]
-
+	cmp eax,0
+	je end
 	loop1:
                 push eax
 
@@ -74,8 +75,8 @@ section .text
 
 section .data
    buff db 0
-	ile  dd 04h
-	text db "x",0
+	ile  dd 0
+	text db "x"
 	textlen equ  $-text
-	crnl db 10,0
+	crnl db 10
 	crnllen equ $-crnl
