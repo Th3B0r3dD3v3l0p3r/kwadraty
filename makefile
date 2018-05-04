@@ -1,3 +1,3 @@
 all:
-	nasm -f elf a.asm
-	ld -m elf_i386 -s -o a a.o
+	nasm -f elf main.asm
+	ld -m elf_i386 -s -o main main.o
